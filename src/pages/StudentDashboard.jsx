@@ -1897,7 +1897,7 @@ const StudentDashboard = () => {
                         : scoreData.score >= 60
                         ? "text-amber-400"
                         : "text-red-400"
-                    }`}               
+                    }`}
                   >
                     {scoreData.score}
                   </span>
@@ -2095,7 +2095,10 @@ const StudentDashboard = () => {
                         transition={{ delay: idx * 0.1 }}
                         whileHover={{ x: 5, scale: 1.02 }}
                         className="bg-gray-700/30 rounded-xl p-4 border border-gray-600/30 group cursor-pointer"
-                        onClick={() => navigate(`/essay/${essay._id}`)}
+                        onClick={() => {
+                          console.log("Navigating to essay:", essay._id);
+                          navigate(`/essay/${essay._id}`);
+                        }}
                       >
                         <div className="flex items-start justify-between mb-2">
                           <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors line-clamp-1">
