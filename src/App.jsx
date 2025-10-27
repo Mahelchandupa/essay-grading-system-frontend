@@ -2,7 +2,7 @@ import React from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import ToastProvider from './context/ToastProvider';
-import router from './routes/routes';
+import router from './route/routes';
 
 function App() {
   return (
